@@ -1,0 +1,3 @@
+Honeybadger.configure do |config|
+  config.api_key = "<%= node[:deploy][@app_name][:honeybadger][:api_key] %>"
+end
