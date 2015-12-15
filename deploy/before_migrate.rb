@@ -1,9 +1,9 @@
 Chef::Log.info("=== Hook: before_migrate for #{release_path}")
-shared_path = ::File.expand_path("#{node[:deploy][application][:deploy_to]}/shared")
-Chef::Log.info("= Shared path is #{shared_path}")
 application="dcc"
 deploy_user="deploy"
 deploy_group="www-data"
+shared_path = ::File.expand_path("#{node[:deploy][application][:deploy_to]}/shared")
+Chef::Log.info("= Shared path is #{shared_path}")
 
 Chef::Log.info("= Creating initializers Dir #{shared_path}/config/initializers")
 directory ::File.expand_path("#{shared_path}/config/initializers") do
